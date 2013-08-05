@@ -1,0 +1,28 @@
+
+<h1>Listing all of the statuses</h1>
+<p><%= link_to 'Post A New Status', new_status_path, class: "btn btn-success" %>
+<hr class="bs-docs-separator"></hr>
+
+
+</p>
+<% @statuses.each do |status| %>
+<div class="status">
+        <strong><%= status.user %></strong>
+        <p><%= status.content %></p>
+
+	<div class="meta">
+        <%= link_to time_ago_in_words(status.created_at) + " ago", status %>
+		<span class="admin">
+          | <%= link_to 'Edit', edit_status_path(status) %> |
+          <%= link_to 'Destroy', status, confirm: 'Are you sure?', method: :delete %>
+        </span>
+    </div>
+</div>
+	
+	
+<% end %>
+  
+
+
+
+
