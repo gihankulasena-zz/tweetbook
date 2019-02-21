@@ -5,7 +5,7 @@ gem 'rails', '>=4.0.3'
 gem 'bootstrap-sass'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.6'
 gem 'devise'
 gem 'protected_attributes'
 gem 'simple_form'
